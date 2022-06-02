@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Found it difficult to figure out what code to write to find things on my own, and difficult to understand what specific code does what, but the instructions and explanations were very clear in the explanations that they did provide.
