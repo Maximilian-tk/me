@@ -1,1 +1,3 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+Learned how to use conditions for variables and loop functions. Loops within loops r pretty funky, you can combine them with conditions to create algorithms (and a bit of maths) to form shapes with organised data.
+
+The most difficult parts of learning is grasping the original concepts of functions - the logic side of creating the scripts where I had to figure out how to edit and adapt the functions was more manageable than the initial learning of what the functions actually do.
