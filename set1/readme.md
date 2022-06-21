@@ -1,2 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
-Check for the commit
+Wrapping my head around what strings, functions, variables etc. are was difficult because to see how each tool works, it has to be demonstrated in the context of other tools which I also don't yet understand. I have a general idea of how my work this week works, but will need to spend some time solidifying my understanding of the tools.
