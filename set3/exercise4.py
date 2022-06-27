@@ -25,21 +25,16 @@ def binary_search(low, high, actual_number):
     guess = 0
     print(f"Actual nunber is {actual_number}")
 
-    # Write your code in here
-
-    guess = low + (high - low) // 2
-    tries = 1
-    print(f"{guess}, {tries} guess fo far")
     while actual_number != guess:
-        if guess > actual_number:
-            high = guess - 1
-            tries = tries + 1
-        elif guess < actual_number:
-            low = guess + 1
-            tries = tries + 1
-        guess = low + (high - low) // 2
-        print(f"{guess}, {tries} guesses so far")
-    print(f"Correct, {guess} was the number! That took {tries} tries.")
+        guess = low + (high - low) // 2 # the maths to each guess, you can use your own maths
+        if guess > actual_number: # if the actual number is lower, the high limit becomes the guess
+            high = guess - 1 # subtract 1 because the guess itself wasnt the actual number
+            tries = tries + 1 # adding 1 try to the try count
+        elif guess < actual_number: # if the actual number is higher, the low limit becomes the guess
+            low = guess + 1 # add 1 because the guess itself wasnt the actual number
+            tries = tries + 1 # adding 1 try to the try count
+        print(f"{guess}, {tries} guesses so far") #printing the guess and the number of guesses
+    print(f"Correct, {guess} was the number! That took {tries} tries.") # printing statement for the correct guess and number of tries
 
 
     return {"guess": guess, "tries": tries}

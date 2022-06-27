@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+figuring out the formatting with loops and extractions for reading files was very challenging. it took me a while to get my head around the fact that i had to use both reading methods for URL and json formats
