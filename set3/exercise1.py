@@ -5,7 +5,7 @@ Modify each function until the tests pass.
 """
 
 
-def loop_ranger(start, stop=None, step=1):
+def loop_ranger(start, stop=0, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
     Using a while loop make a list of numbers that goes from the start number up
@@ -17,7 +17,13 @@ def loop_ranger(start, stop=None, step=1):
     Look up for how range() works in the python docs. You could  answer this
     with just the range function, but we'd like you to do it the long way.
     """
-    return None
+    loop = []
+    i = start
+    while i < stop:
+        loop.append(i)
+        print(i)
+        i = i + step
+    return loop
 
 
 def two_step_ranger(start, stop):
@@ -28,7 +34,14 @@ def two_step_ranger(start, stop):
 
     You can either reuse loop_ranger, or the range function that in the standard library
     """
-    return None
+    loop = []
+    i = start
+    while i < stop:
+        loop.append(i)
+        print(i)
+        i = i + 2
+    return loop
+    
 
 
 def stubborn_asker(low, high):
@@ -39,7 +52,15 @@ def stubborn_asker(low, high):
 
     Look up the docs for a function called "input"
     """
-    return None
+    
+    x = input(f"Please write a number between {low} and {high}:")
+    x = int(x)
+    while x < low or x > high:
+        print("This is not within the range")
+        x = input(f"Please write a number betwwen {low} and {high}")
+        x = int(x)
+    print("This IS in range")
+    return x
 
 
 def not_number_rejector(message):
@@ -49,8 +70,15 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
-
+    while True:
+        try:
+            x = int(input("Please enter a number: "))
+        except Exception:
+            print("That's not a number, pls try again")
+        else:
+            print(f"{x} is a number")
+            break
+    return x
 
 def super_asker(low, high):
     """Robust asking function.
@@ -58,7 +86,18 @@ def super_asker(low, high):
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
     """
-    return None
+    while True:
+        try:
+            x = int(input(f"Please enter a number that is between {low} and {high}: "))
+        except Exception:
+            print("That's not a number, pls try again")
+        else:
+            if x < low or x > high:
+                print("That's not in range")
+            else:
+                break
+    print(f"{x} IS a number in range")
+    return x
 
 
 if __name__ == "__main__":
@@ -71,7 +110,7 @@ if __name__ == "__main__":
     print("\nloop_ranger", loop_ranger(1, 10, 2))
     print("\ntwo_step_ranger", two_step_ranger(1, 10))
     print("\nstubborn_asker")
-    stubborn_asker(30, 45)
+    # stubborn_asker(30, 45)
     print("\nnot_number_rejector")
     not_number_rejector("Enter a number: ")
     print("\nsuper_asker")
