@@ -1,1 +1,3 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+Learnt how to use refactoring in the context of past activities (word pyramid). This was fine to learn.
+Using programming to draw shapes and seeing it run live to construct the 2D shape was interesting. Using logic to figure out how to construct shapes was refreshing because I could see the resemblance in use for these skills to computational design to parametric algorithms in Grasshopper
